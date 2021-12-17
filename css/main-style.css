@@ -1,0 +1,110 @@
+/* start global rules */
+:root {
+    --light-blue: #2196f3; 
+    /* --section-padding: 15px; */
+    /* --section-margin:100px;  */
+    }
+    * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    }
+    html {
+    scroll-behavior: smooth;
+    }
+    body {
+    font-family: "Cairo","Open Sans", sans-serif;
+    }
+    ul {
+    list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    /* Small */
+    @media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+    }
+    /* Medium */
+    @media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+    }
+    /* Large */
+    @media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+    }
+    /* End Global Rules */
+
+                        /***********************************************************************************/
+/* start header */
+    /* start navigation bar */
+    header .nav {
+        /* background-color: rgb(159, 159, 165); */
+    }
+    header .nav .container{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .nav .container .logo a{
+        font-size: 26px;
+        font-weight: bold;
+        color:var(--light-blue) ;
+    }
+    header .nav .container ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        font-size: 18px;
+    }
+    header .nav .container ul li{
+        padding: 25px 15px;
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+    }
+    header .nav .container ul li a::before{
+        content: "";
+        position: absolute;
+        width: 0%;
+        background-color: var(--light-blue);
+        height: 2px;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+    header .nav .container ul li:hover a::before{
+        width: 100%;
+    }
+    header .nav .container ul li:hover{
+        background-color: #fafafa;
+    }
+
+
+
+
+    /* end navigation bar */
+/* end header */
+
+
+    
