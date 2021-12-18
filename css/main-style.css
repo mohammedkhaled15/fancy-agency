@@ -57,7 +57,7 @@
 /* start header */
     /* start navigation bar */
     header{
-        box-shadow: 0 0 10px #ddd;
+        box-shadow: 0 0 10px red;
         position: relative;
         background-color: #fff;
     }
@@ -150,9 +150,11 @@
     @media(max-width:767px){
         header .mega-menu{
             font-size: 14px;
-            gap: 10px;
-            padding: 5px 5px;
+            padding: 5px;
+            gap: 0;
             justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
         }
     }
     header .nav .container .main-list > li:last-child:hover  .mega-menu{
@@ -166,12 +168,35 @@
     header .mega-menu .links li{
         padding: 20px;  
     }
+    @media(max-width:767px){
+        header .mega-menu .links {
+            width: 100%;
+        }
+    }
+    @media(min-width:767px) and (max-width:992px){
+        header .mega-menu .links {
+            width: 50%;
+        }
+    }
+    @media(max-width:767px){
+        header .mega-menu .links li{
+            padding: 5px;
+        }
+    }
     header .mega-menu .links li:not(:last-child){
-        
         border-bottom: solid 1px #ddd;
+    }
+    @media(max-width:767px){
+        header .mega-menu li:not(:last-child){
+            border-bottom: solid 1px #ddd;
+        }
+        header .mega-menu .links:first-of-type li:last-child{
+            border-bottom: solid 1px #ddd;
+        }
     }
     header .mega-menu .links li a{
         font-size: 18px;
+        font-weight: bold;
         color: var(--light-blue);
     }
     @media(max-width:1200px){
@@ -185,6 +210,15 @@
             text-align: center;
         }
     }
+    @media (max-width:767px){
+        header .mega-menu .links li a{
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 15px;
+            font-size: 14px;
+        }
+    }
     header .mega-menu .links li a i{
         margin-right: 15px;
     }
@@ -196,7 +230,7 @@
     header .mega-menu .image img{
         max-width: 100%;
     }
-    @media(max-width:767px){
+    @media(max-width:992px){
         header .mega-menu .image{
             display: none;
         }
