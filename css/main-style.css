@@ -856,12 +856,16 @@ header .mega-menu .image img{
     top: 0;
     right: 0;
     position: absolute;
-    /* z-index: -1; */
+    border-radius: 15px;
     transition: var(--transition-duration);
     -webkit-transition: var(--transition-duration);
     -moz-transition: var(--transition-duration);
     -ms-transition: var(--transition-duration);
     -o-transition: var(--transition-duration);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 .team-members .content .card:hover:after{
     width: 100%;
