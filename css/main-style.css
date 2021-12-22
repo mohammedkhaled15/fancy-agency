@@ -223,6 +223,7 @@ header{
     box-shadow: 0 0 10px #ddd;
     position: relative;
     background-color: #fff;
+    
 }
 header.nav{
     position: relative;
@@ -407,6 +408,7 @@ header .mega-menu .image img{
     width: 100%;
     position: relative;
     overflow: hidden;
+    
 }
 .landing-section::before{
     content: "";
@@ -483,6 +485,10 @@ header .mega-menu .image img{
     color: var(--light-blue);
     animation: bounce 2s infinite linear;
     -webkit-animation: bounce 2s infinite linear;
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
 }
 /* end Landing */
 /*************************************************************************/
@@ -490,9 +496,8 @@ header .mega-menu .image img{
 .articles{
     padding-top: var(--section-padding);
     padding-bottom: var(--section-bottom-padding);
-}
-.articles .container{
     text-align: center;
+    
 }
 .articles .content{
     display: grid;
@@ -558,6 +563,7 @@ header .mega-menu .image img{
     padding-bottom: var(--section-bottom-padding);
     text-align: center;
     background-color: var(--section-color);
+    
 }
 .gallery .content{
     display: grid;
@@ -612,6 +618,7 @@ header .mega-menu .image img{
     padding-top: var(--section-top-padding);
     padding-bottom: var(--section-bottom-padding);
     text-align: center;
+    
 }
 .features .content{
     display: grid;
@@ -708,10 +715,10 @@ header .mega-menu .image img{
     padding: 10px 30px;
     position: relative;
     border-radius: 4px  ;
-    -webkit-border-radius: 4px  ;
-    -moz-border-radius: 4px  ;
-    -ms-border-radius: 4px  ;
-    -o-border-radius: 4px  ;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
     transition: var(--transition-duration);
     -webkit-transition: var(--transition-duration);
     -moz-transition: var(--transition-duration);
@@ -767,6 +774,7 @@ header .mega-menu .image img{
     padding-bottom: var(--section-bottom-padding);
     text-align: center;
     background-color: var(--section-color);
+    
 }
 .testimonials .content{
     display: grid;
@@ -779,10 +787,10 @@ header .mega-menu .image img{
     background-color: white;
     padding: 20px 15px;
     border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
     display: flex;
     flex-direction: column;
 }
@@ -829,12 +837,16 @@ header .mega-menu .image img{
     padding-top: var(--section-top-padding);
     padding-bottom: var(--section-bottom-padding);
     text-align: center;
+    
 }
 .team-members .content{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     gap: 30px;
 } 
+.team-members .section-header{
+    padding: 10px 1px;
+}
 .team-members .content .card{
     position: relative;
     width: calc(100% - 60px);
@@ -848,6 +860,15 @@ header .mega-menu .image img{
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
 }
+/* @media (max-width : 600px){
+        .team-members .content .card{
+            transform: translateX(30px);
+            -webkit-transform: translateX(30px);
+            -moz-transform: translateX(30px);
+            -ms-transform: translateX(30px);
+            -o-transform: translateX(30px);
+}
+} */
 .team-members .content .card:after{
     content: "";
     background-color: #e4e4e4;
@@ -872,7 +893,7 @@ header .mega-menu .image img{
 }
 .team-members .content .card .image{
     position: relative; 
-    left: -15%;
+    left: -14%;
     border-radius: 30px;
     overflow: hidden;
     z-index: 1;
@@ -930,6 +951,7 @@ header .mega-menu .image img{
     padding-bottom: var(--section-bottom-padding);
     background-color: var(--section-color);
     text-align: center;
+    
 }
 .services .content{
     display: grid;
@@ -1002,7 +1024,7 @@ header .mega-menu .image img{
     flex-direction: row;
     align-items: center;
     bottom: 0;
-    padding: 20px;50px
+    padding: 20px;
     width: 100%;
     height: 50px;
     background-color: #f9f9f9;
@@ -1030,5 +1052,106 @@ header .mega-menu .image img{
 .services .content .card:hover .effect{
     width: 100%;
 }
-
 /* end services */
+/****************************************************************************/
+/* start skills */
+.skills{
+    padding-top: var(--section-top-padding);
+    padding-bottom: var(--section-bottom-padding);
+    text-align: center;
+    
+}
+.skills .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills .content .image img{
+    max-width: 100%;
+}
+@media(max-width:992px){
+    .skills .content .image{
+        display: none;
+    }
+}
+.skills .content .skills-rates{
+    flex: 1;
+}
+.skills .content .skills-rates .progress{
+    width: 90%;
+    background-color: #eeeeee;
+    height: 25px;
+    margin: 50px 0;
+    position: relative;
+}
+.skills .content .skills-rates .progress span{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: var(--light-blue);
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+.skills .content .skills-rates .progress:nth-child(1) span{
+    width: 90%;
+}
+.skills .content .skills-rates .progress:nth-child(2) span{
+    width: 85%;
+}
+.skills .content .skills-rates .progress:nth-child(3) span{
+    width: 70%;
+}
+.skills .content .skills-rates .progress:nth-child(4) span{
+    width: 80%;
+}
+.skills .content .skills-rates .progress::before{
+    position: absolute;
+    left: 0;
+    top: -120%;
+    color: black;
+    font-weight: bold;
+}
+.skills .content .skills-rates .progress:nth-child(1):before{
+    content: "HTML";
+}
+.skills .content .skills-rates .progress:nth-child(2):before{
+    content: "CSS";
+}
+.skills .content .skills-rates .progress:nth-child(3):before{
+    content: "javaScript";
+}
+.skills .content .skills-rates .progress:nth-child(4):before{
+    content: "Python";
+}
+.skills .content .skills-rates .progress:after{
+    position: absolute;
+    font-size: 12px;
+    top: -130%;
+    right: 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 2px;
+    color: var(--light-blue);
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
+.skills .content .skills-rates .progress:nth-child(1)::after{
+    content: "90%";
+}
+.skills .content .skills-rates .progress:nth-child(2)::after{
+    content: "85%";
+}
+.skills .content .skills-rates .progress:nth-child(3)::after{
+    content: "60%";
+}
+.skills .content .skills-rates .progress:nth-child(4)::after{
+    content: "70%";
+}
+/* end skills */
