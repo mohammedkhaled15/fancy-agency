@@ -841,7 +841,7 @@ header .mega-menu .image img{
     display: flex;
     flex-direction: column;
     background-color: var(--section-color);
-    padding: 3  0px 10px;
+    padding: 30px 10px;
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -923,3 +923,112 @@ header .mega-menu .image img{
     text-align: left;
 }
 /* end team-members */
+/*******************************************************************************/
+/* start services */
+.services{
+    padding-top: var(--section-top-padding);
+    padding-bottom: var(--section-bottom-padding);
+    background-color: var(--section-color);
+    text-align: center;
+}
+.services .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 40px;
+    
+}
+.services .content .card{
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 5px 5px 10px #666;
+    color: var(--light-blue);
+    counter-increment: count-of-cards;
+    position: relative;
+    z-index: 10;
+    transition: var(--transition-duration);
+    -webkit-transition: var(--transition-duration);
+    -moz-transition: var(--transition-duration);
+    -ms-transition: var(--transition-duration);
+    -o-transition: var(--transition-duration);
+}
+.services .content .card:hover{
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+}
+.services .content .card:before{
+    content: "";
+    position: absolute;
+    width: 49px;
+    height: 50px;
+    left: 64px;
+    bottom: 0;
+    background-color: #dcdcdc;
+    transform: skewx(-37deg);
+    -webkit-transform: skewx(-37deg);
+    -moz-transform: skewx(-37deg);
+    -ms-transform: skewx(-37deg);
+    -o-transform: skewx(-37deg);
+    z-index: 12;
+}
+.services .content .card::after{
+    content: counter(count-of-cards,decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 26px;
+    background-color: var(--light-blue);
+    padding: 10px 40px 10px 20px;
+    z-index: 11;
+}
+.services .content .card h2{
+    padding-bottom: 30px;
+}
+.services .content .card i{
+    color: #d5d5d5;
+    padding-bottom: 20px;
+}
+.services .content .card a span{
+    letter-spacing: 2px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    bottom: 0;
+    padding: 20px;50px
+    width: 100%;
+    height: 50px;
+    background-color: #f9f9f9;
+    z-index: -1;
+    color: var(--light-blue);
+}
+.services .content .card .effect{
+    position: absolute;
+    height: 3px;
+    background-color: var(--light-blue);
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 00px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transition: var(--transition-duration);
+    -webkit-transition: var(--transition-duration);
+    -moz-transition: var(--transition-duration);
+    -ms-transition: var(--transition-duration);
+    -o-transition: var(--transition-duration);
+}
+.services .content .card:hover .effect{
+    width: 100%;
+}
+
+/* end services */
