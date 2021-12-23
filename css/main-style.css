@@ -824,7 +824,6 @@ header .mega-menu .image img{
     -o-border-radius:50% ;
     position: absolute;
     top: -20%;
-    right:-4%;
     overflow: hidden;
 }
 .testimonials .content .card .image img{
@@ -849,26 +848,47 @@ header .mega-menu .image img{
 }
 .team-members .content .card{
     position: relative;
-    width: calc(100% - 60px);
+    /* width: calc(100% - 60px); */
     display: flex;
     flex-direction: column;
-    background-color: var(--section-color);
-    padding: 30px 10px;
+    background-color:#fff;
+    padding: 30px;
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
 }
+.team-members .content .card .main-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 /* @media (max-width : 600px){
-        .team-members .content .card{
-            transform: translateX(30px);
-            -webkit-transform: translateX(30px);
-            -moz-transform: translateX(30px);
-            -ms-transform: translateX(30px);
-            -o-transform: translateX(30px);
+    .team-members .content .card{
+        transform: translateX(30px);
+        -webkit-transform: translateX(30px);
+        -moz-transform: translateX(30px);
+        -ms-transform: translateX(30px);
+        -o-transform: translateX(30px);
 }
 } */
+.team-members .content .card:before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    background-color: var(--section-color);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
 .team-members .content .card:after{
     content: "";
     background-color: #e4e4e4;
@@ -889,14 +909,12 @@ header .mega-menu .image img{
     -o-border-radius: 15px;
 }
 .team-members .content .card:hover:after{
-    width: 100%;
+    width: 80%;
 }
 .team-members .content .card .image{
-    position: relative; 
-    left: -14%;
     border-radius: 30px;
     overflow: hidden;
-    z-index: 1;
+    z-index: 5;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
@@ -915,10 +933,9 @@ header .mega-menu .image img{
     -webkit-filter: grayscale(100%);
 }
 .team-members .content .social{
-    position: absolute;
-    top: 20%;
     z-index: 1;
-    right: 5%;
+    padding: 5px 0px 5px 20px;
+    /* right: 5%; */
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -936,12 +953,14 @@ header .mega-menu .image img{
     z-index: 1;
     color: var(--light-blue);
     padding: 15px;
+    margin-left: 60px;
 }    
 .team-members .content .card p{
     z-index: 1;
     color: #666;
     padding: 15px;
     text-align: left;
+    margin-left: 60px;
 }
 /* end team-members */
 /*******************************************************************************/
@@ -1079,7 +1098,7 @@ header .mega-menu .image img{
     flex: 1;
 }
 .skills .content .skills-rates .progress{
-    width: 90%;
+    width: 100%;
     background-color: #eeeeee;
     height: 25px;
     margin: 50px 0;

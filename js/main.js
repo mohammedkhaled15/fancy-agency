@@ -9,7 +9,7 @@ window.onload = function(){
 
 window.onscroll = function(){
 
-    if(window.scrollY >= section.offsetTop - 100){
+    if(window.scrollY >= section.offsetTop - 200){
 
         prog.forEach((a)=>a.style.width = a.dataset.width)
     }
