@@ -865,16 +865,6 @@ header .mega-menu .image img{
     justify-content: center;
     align-items: center;
 }
-
-/* @media (max-width : 600px){
-    .team-members .content .card{
-        transform: translateX(30px);
-        -webkit-transform: translateX(30px);
-        -moz-transform: translateX(30px);
-        -ms-transform: translateX(30px);
-        -o-transform: translateX(30px);
-}
-} */
 .team-members .content .card:before{
     content: "";
     position: absolute;
@@ -935,7 +925,6 @@ header .mega-menu .image img{
 .team-members .content .social{
     z-index: 1;
     padding: 5px 0px 5px 20px;
-    /* right: 5%; */
     display: flex;
     flex-direction: column;
     gap: 40px;
