@@ -823,6 +823,7 @@ header .mega-menu .image img{
     position: absolute;
     top: -20%;
     overflow: hidden;
+    right: 0;
 }
 .testimonials .content .card .image img{
     max-width: 100%;
@@ -1134,8 +1135,9 @@ header .mega-menu .image img{
 .skills .content .skills-rates .progress:nth-child(4):before{
     content: "Python";
 }
-.skills .content .skills-rates .progress:after{
+.skills .content .skills-rates .progress h5{
     position: absolute;
+    width: fit-content;
     font-size: 12px;
     top: -130%;
     right: 0;
@@ -1143,22 +1145,6 @@ header .mega-menu .image img{
     border-radius: 5px;
     padding: 2px;
     color: var(--light-blue);
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
-}
-.skills .content .skills-rates .progress:nth-child(1)::after{
-    content: "90%";
-}
-.skills .content .skills-rates .progress:nth-child(2)::after{
-    content: "85%";
-}
-.skills .content .skills-rates .progress:nth-child(3)::after{
-    content: "60%";
-}
-.skills .content .skills-rates .progress:nth-child(4)::after{
-    content: "70%";
 }
 /* end skills */
 /*************************************************************************************/

@@ -26,33 +26,81 @@ myBtn.addEventListener("click",function(){
 
 //*************************************************************************************************************/
 
-//Loading skills when you scroll to its section
+// Loading skills when you scroll to its section
 
-//We have first to store the value of width of each skill in a custom attr called for example (data-width)
+// We have first to store the value of width of each skill in a custom attr called for example (data-width)
 
-//Declaring necessary variables
+// Declaring necessary variables
 let prog = document.querySelectorAll(".progress span")  
 let section = document.querySelector(".skills")
 
-//Making sure that all width are 00 when the window load
-window.onload = function(){
+// Making sure that all width are 00 when the window load
+window.addEventListener("load",function(){
 
     prog.forEach((a)=>a.style.width = "0")
 
-}
+})
 
-//using onscroll event to read the prop scrollY of window 
-window.onscroll = function(){
+// using onscroll event to read the prop scrollY of window 
+window.addEventListener("scroll",function(){
 
-    //when the value of scrollY reaches the sectiom offsetTop which mean it is on your screen now
+     // when the value of scrollY reaches the sectiom offsetTop which mean it is on your screen now
     // 200 here means before the value of offsettop with 200px
     if(window.scrollY >= section.offsetTop - 200){
 
-        //making the width of each skill equal to the value stored in the custom attr
+        // making the width of each skill equal to the value stored in the custom attr
         prog.forEach((a)=>a.style.width = a.dataset.width)
 
     }
+})
+
+/***************************************************************************************************************/
+
+// Making percentage counters increase to its values when scroll to its position
+
+// Declaring our variables
+let counters = document.querySelectorAll(".skills .content .skills-rates .progress h5")
+let started = false;
+
+// // Making sure that all numbers are 0% when the window load
+window.addEventListener("load",function(){
+
+    counters.forEach((a)=>a.textContent = "0")
+    // counters.forEach((a)=>console.log(a.textContent))
+
+})
+
+
+
+
+// Making our main function
+function count (el){
+    let goal = el.dataset.goal
+    let sem = setInterval(()=>{
+        el.textContent++ ;
+        console.log(el.textContent == goal)
+        if(el.textContent == goal){
+            clearInterval(sem);
+            el.textContent = `${el.textContent}%`    
+        }
+    },900 / goal)
 }
+
+window.addEventListener("scroll",function(){
+
+    // when the value of scrollY reaches the sectiom offsetTop which mean it is on your screen now
+   // 200 here means before the value of offsettop with 200px
+   if(window.scrollY >= section.offsetTop - 200){
+
+        if(!started){
+             // making the width of each skill equal to the value stored in the custom attr
+       counters.forEach((a)=>count(a))
+        }
+
+      started = true
+
+   }
+})
 
 /***************************************************************************************************************/
 
