@@ -1163,3 +1163,110 @@ header .mega-menu .image img{
     content: "70%";
 }
 /* end skills */
+/*************************************************************************************/
+/* start how it works */
+.how-it-works{
+    padding-top: var(--section-top-padding);
+    padding-bottom: var(--section-bottom-padding);
+    text-align: center;
+    background-color: var(--section-color);
+}
+.how-it-works .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+@media(max-width:992px){
+    .how-it-works .content{
+        flex-direction: column;
+    }
+}
+.how-it-works .content .image{
+    width: 50%;
+}
+.how-it-works .content .image img{
+    max-width: 100%;
+}
+.how-it-works .content .steps{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+}
+.how-it-works .content .steps .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(246, 245, 245);
+    border: 2px solid #fff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+@media (max-width:767px){
+    .how-it-works .content .steps .card{
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+.how-it-works .content .steps .card:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    background-color: var(--section-color);
+    transition: var(--transition-duration);
+    -webkit-transition: var(--transition-duration);
+    -moz-transition: var(--transition-duration);
+    -ms-transition: var(--transition-duration);
+    -o-transition: var(--transition-duration);
+    z-index: 2;
+    width: 0;
+    height: 0;
+}
+.how-it-works .content .steps .card:hover::after{
+    width: 100%;
+    height: 100%;
+}
+.how-it-works .content .steps .card .image{
+    width: 30%;
+    padding-right: 5%;
+    z-index: 3;
+}
+.how-it-works .content .steps .card .image img{
+    max-width: 100%;
+}
+.how-it-works .content .steps .card .info{
+    text-align: left;
+    z-index: 3;
+}
+@media(max-width:767px){
+    .how-it-works .content .steps .card .info{
+        text-align: center;
+    }
+}
+.how-it-works .content .steps .card .info h2{
+    padding-bottom: 20px;
+}
+.how-it-works .content .steps .card .info p{
+    padding-bottom: 10px;
+    line-height: 1.9;
+    color: #666;
+}
+
+/* end how it works */
