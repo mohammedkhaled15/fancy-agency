@@ -58,48 +58,64 @@ window.addEventListener("scroll",function(){
 
 // Making percentage counters increase to its values when scroll to its position
 
-// Declaring our variables
+// Declaring variable storing our counters to be able to access over it
 let counters = document.querySelectorAll(".skills .content .skills-rates .progress h5")
+
+// declaring variable with default value "false"
+// IMPORTANT NOTE: THIS VARIABLE USED TO PREVENT THE FUNCTION FROM WORKING CONTINUOSLY WITH SCROLLING UP AND DOWN EVEN IF THE CONDITION OF REACHING OUR GOAL ACHIEVED, SO WHEN THE CONDITION ACHIEVED WE WILL CHANGE ITS VALUE TO TRUE, WHICH MEAN THAT THE FUNCTION WILL WORK JUST ONE TIME NOT EVERY TIME WE SCROLL
 let started = false;
 
 // // Making sure that all numbers are 0% when the window load
 window.addEventListener("load",function(){
 
     counters.forEach((a)=>a.textContent = "0")
-    // counters.forEach((a)=>console.log(a.textContent))
 
 })
 
-
-
-
 // Making our main function
 function count (el){
+
+    // Storing required goal value in variable using written data-goal custom attr in html
     let goal = el.dataset.goal
+
+    // Store our setinterval function in variable to be able to stop it using clearinterval method 
     let sem = setInterval(()=>{
+
+        // increament of the text content by 1 each certain period of time
         el.textContent++ ;
-        console.log(el.textContent == goal)
+
+        // using if condition to check when th  increament value reches the required goal value
         if(el.textContent == goal){
+
+            // stop the setinterval func when reaching the required goal value
             clearInterval(sem);
+
+            // adding "%" beside the final result
             el.textContent = `${el.textContent}%`    
         }
+
+    // dividing required period of time by the goal to make all counter finish at the same time    
     },900 / goal)
 }
 
+// excuting our main function when srolling down to the section
 window.addEventListener("scroll",function(){
 
-    // when the value of scrollY reaches the sectiom offsetTop which mean it is on your screen now
+    // when the value of scrollY reaches the section offsetTop which mean it is on your screen now
    // 200 here means before the value of offsettop with 200px
-   if(window.scrollY >= section.offsetTop - 200){
+    if(window.scrollY >= section.offsetTop - 200){
 
         if(!started){
-             // making the width of each skill equal to the value stored in the custom attr
-       counters.forEach((a)=>count(a))
+
+        // making the width of each skill equal to the value stored in the custom attr
+        counters.forEach((a)=>count(a))
+
         }
 
-      started = true
+    // CHANGING THE VALUE OF "started" VARIABLE after making sure that our function finished excution one time   
+    started = true
 
-   }
+    }
 })
 
 /***************************************************************************************************************/
