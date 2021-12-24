@@ -160,3 +160,68 @@ setInterval(function(){
 
 },1000)
 
+/***********************************************************************************************************/
+
+// Making prices count from zero
+
+// storing prices in variables
+let prices = document.querySelectorAll(".pricing .content .card h1")
+
+// storing our section in variable
+let pricePlans = document.getElementById("pricing")
+
+// IMPORTANT NOTE: THIS VARIABLE USED TO PREVENT THE FUNCTION FROM WORKING CONTINUOSLY WITH SCROLLING UP AND DOWN EVEN IF THE CONDITION OF REACHING OUR GOAL ACHIEVED, SO WHEN THE CONDITION ACHIEVED WE WILL CHANGE ITS VALUE TO TRUE, WHICH MEAN THAT THE FUNCTION WILL WORK JUST ONE TIME NOT EVERY TIME WE SCROLL
+let done = false;
+
+// // Making sure that all numbers are $ 0 when the window load
+window.addEventListener("load",function(){
+
+    prices.forEach((a)=>a.textContent = "0")
+
+})
+
+// Making our main function
+function countPrice (el){
+
+    // Storing required goal value in variable using written data-goal custom attr in html
+    let goal = el.dataset.goal
+
+    // Store our setinterval function in variable to be able to stop it using clearinterval method 
+    let sem = setInterval(()=>{
+
+        // increament of the text content by 1 each certain period of time
+        el.textContent++ ;
+
+        // using if condition to check when th  increament value reches the required goal value
+        if(el.textContent == goal){
+
+            // stop the setinterval func when reaching the required goal value
+            clearInterval(sem);
+
+            // adding "%" beside the final result
+            el.textContent = `$ ${el.textContent}`    
+        }
+
+    // dividing required period of time by the goal to make all counter finish at the same time    
+    },900 / goal)
+}
+
+// excuting our main function when srolling down to the section
+window.addEventListener("scroll",function(){
+
+    // when the value of scrollY reaches the section offsetTop which mean it is on your screen now
+   // 200 here means before the value of offsettop with 200px
+    if(window.scrollY >= pricePlans.offsetTop - 200){
+
+        if(!done){
+
+        // making the width of each skill equal to the value stored in the custom attr
+        prices.forEach((a)=>countPrice(a))
+
+        }
+
+    // CHANGING THE VALUE OF "started" VARIABLE after making sure that our function finished excution one time   
+    done = true
+
+    }
+})

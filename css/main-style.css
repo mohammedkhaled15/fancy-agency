@@ -159,6 +159,24 @@ margin-right: auto;
         opacity: 0;
     }
 }
+@keyframes hang {
+    0%{
+        transform: rotateZ(80deg);
+        -webkit-transform: rotateZ(80deg);
+        -moz-transform: rotateZ(80deg);
+        -ms-transform: rotateZ(80deg);
+        -o-transform: rotateZ(80deg);
+        transform-origin: center;
+}
+    100%{
+        transform: rotateZ(100deg);
+        -webkit-transform: rotateZ(100deg);
+        -moz-transform: rotateZ(100deg);
+        -ms-transform: rotateZ(100deg);
+        -o-transform: rotateZ(100deg);
+        transform-origin: center;
+}
+}
 /* end animation section */
 /* End Global */
 /***********************************************************************************/
@@ -1415,3 +1433,175 @@ header .mega-menu .image img{
     font-weight: bold;
 }
 /* end latest events */
+/********************************************************************************************/
+/* start pricing */
+.pricing{
+    padding-top: var(--section-top-padding);
+    padding-bottom: var(--section-bottom-padding);
+    text-align: center;
+    position: relative;
+    background-color: var(--section-color);
+}
+.pricing .one,
+.pricing .two{
+    position: absolute;
+    width: 150px;
+}
+.pricing .one{
+    top: 15%;
+    right: 0;
+}
+.pricing .two{
+    bottom: 15%;
+    left: 0;
+}
+@media(max-width:992px){
+    .pricing .one,
+    .pricing .two{
+        display: none;
+    }
+}
+.pricing .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 30px;
+}
+.pricing .content .card{
+    background-color: #fff;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    padding: 20px 0 30px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.pricing .content .card:before,
+.pricing .content .card:after{
+    content: "";
+    position:absolute;
+    background-color: #666;
+    opacity: 0.1;
+    height: 50%;
+    width: 0%;
+    z-index: -1;
+    transition: var(--transition-duration);
+    -webkit-transition: var(--transition-duration);
+    -moz-transition: var(--transition-duration);
+    -ms-transition: var(--transition-duration);
+    -o-transition: var(--transition-duration);
+}
+.pricing .content .card:before{
+    top: 0;
+    right: 0;
+}
+.pricing .content .card:after{
+    left: 0;
+    bottom: 0;
+}
+.pricing .content .card:hover:before,
+.pricing .content .card:hover::after{
+    width: 100%;
+}
+.pricing .content .card h2{
+    font-size: 1.6rem;
+    letter-spacing: -0.9px;
+    padding-bottom: 30px;
+}
+.pricing .content .card:nth-child(2) span{
+    right: -9%;
+    position: absolute;
+    color: #fff;
+    background-color: var(--light-blue);
+    padding: 8px 26px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    top: 9%;
+    transform: rotateZ(90deg);
+    -webkit-transform: rotateZ(90deg);
+    -moz-transform: rotateZ(90deg);
+    -ms-transform: rotateZ(90deg);
+    -o-transform: rotateZ(90deg);
+    z-index: -2;
+    animation: hang infinite 1s forwards;
+    -webkit-animation: hang infinite 1s linear alternate ;
+}
+.pricing .content .card:nth-child(2) span:after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-width: 18px;
+    top: 50%;
+    right: -1%;
+    border-color: transparent #fff transparent transparent;
+    border-style: solid;
+    transform: translatey(-50%);
+}
+.pricing .content img{
+    max-width: 25%;
+    padding-bottom: 30px;
+}
+.pricing .content h1{
+    color: var(--light-blue);
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    position: relative;
+    padding-bottom: 40px;
+    margin: 0;
+}
+.pricing .content h1:after{
+    content: "Per Month";
+    position: absolute;
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: normal;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.pricing .content .card ul{
+    text-align: left;
+    padding-bottom: 30px;
+}
+.pricing .content .card ul li{
+    position: relative;
+    padding: 15px 10px;
+    border-top: 1px solid #eee;
+}
+.pricing .content .card ul li:before{
+    font-family: "Font Awesome 6 Free";
+    content: "\f00c";
+    font-weight: bold;
+    color: var(--light-blue);
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+.pricing .content .card button{
+    border: solid 2px var(--light-blue);
+    background-color: transparent;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 20;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    color: var(--light-blue);
+    font-weight: bold;
+    transition: var(--transition-duration);
+    -webkit-transition: var(--transition-duration);
+    -moz-transition: var(--transition-duration);
+    -ms-transition: var(--transition-duration);
+    -o-transition: var(--transition-duration);
+    z-index: 5;
+}
+.pricing .content .card button:hover{
+    background-color: var(--light-blue);
+    color: #fff;
+}
+/* end pricing */
