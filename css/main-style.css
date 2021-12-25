@@ -350,6 +350,9 @@ header .mega-menu{
 header .mega-menu .links li{
     padding: 20px;  
 }
+header .mega-menu .links li:hover{
+    background-color: #fafafa;
+}
 @media(max-width:767px){
     header .mega-menu .links {
         width: 100%;
@@ -1605,3 +1608,96 @@ header .mega-menu .image img{
     color: #fff;
 }
 /* end pricing */
+/*********************************************************************************************************/
+/* start videos */
+.videos{
+    padding-top: var(--section-top-padding);
+    padding-bottom: var(--section-bottom-padding);
+    text-align: center;
+}
+.videos .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid var(--section-color);
+}
+@media (max-width:1200px){
+    .videos .content{
+        flex-direction: column-reverse;
+    }
+}
+.videos .content .menu{
+    min-width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    
+}
+.videos .content .menu .title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 15px;
+    height: 10%;
+    border-bottom: 1px solid var(--section-color);
+}
+.videos .content .menu ul{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 90%;
+    justify-content: space-between;
+}
+.videos .content .menu ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    width: 100%;
+    border-bottom:1px solid #f4f4f4;
+    padding: 20px;
+    cursor: pointer;
+    transition: var(--transition-duration);
+    -webkit-transition: var(--transition-duration);
+    -moz-transition: var(--transition-duration);
+    -ms-transition: var(--transition-duration);
+    -o-transition: var(--transition-duration);
+}
+.videos .content .menu ul li:hover{
+    background-color: #fafafa;
+}
+.videos .content .menu ul li span:first-child{
+    transition: var(--transition-duration);
+    -webkit-transition: var(--transition-duration);
+    -moz-transition: var(--transition-duration);
+    -ms-transition: var(--transition-duration);
+    -o-transition: var(--transition-duration);
+}
+.videos .content .menu ul li:hover span:first-child{
+    color: var(--light-blue);
+}
+.videos .content .menu ul li span:nth-child(2){
+    color: #666;
+}
+.videos .content .preview{
+    background-color: var(--section-color);
+    padding: 10px;
+    align-self: stretch;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.videos .content .preview .comment{
+    background-color: #fff;
+    text-align: left;
+    padding: 15px 10px;
+}
+.videos .content .preview .image video{
+    max-width: 100%;
+}
+/* end videos */

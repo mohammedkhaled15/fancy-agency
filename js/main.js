@@ -225,3 +225,27 @@ window.addEventListener("scroll",function(){
 
     }
 })
+
+/*********************************************************************************************************/
+
+// Playing with video section
+
+let videos = ["E7na Gomhhoro el gabbar.flv","Nature.mp4","videoplayback_5 (2).FLV","videoplayback_5 (3).FLV","videoplayback_5 (4).FLV","How To Creat Sub Domain.FLV"]
+
+// Storing our video titles in variable
+let videoName = document.querySelectorAll(".videos .content .menu ul li")
+
+// Storing title of the playing video in variable
+let playingVideoName = document.querySelector(".videos .content .preview .comment p")
+
+let source = document.querySelector(".videos .content .preview .image video")
+
+// Adding event for each li when clicked
+videoName.forEach((a)=>{
+    a.addEventListener("click", function () {
+        // console.log(a)
+        source.setAttribute("src",`videos/${a.children[0].textContent}.FLV`)
+        // Changing the title of the playing video to the one which clicked
+        playingVideoName.textContent = a.children[0].textContent
+    })
+})
