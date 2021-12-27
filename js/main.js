@@ -309,3 +309,27 @@ window.addEventListener("scroll", function(){
         
     }
 })
+
+/*************************************************************************************************************/
+
+let mypr = document.querySelector(".landing-section .intro p").dataset.text
+
+let place = document.querySelector(".landing-section .intro p")
+console.log(mypr)
+
+let prr = function(a){
+    
+    let i = 0
+    let typing = setInterval(function(){
+            
+            place.textContent += mypr[i]
+            i +=1
+            if(i > mypr.length-1){
+                clearInterval(typing)
+            }
+        
+    },300)
+}
+
+
+prr(mypr);
