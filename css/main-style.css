@@ -292,7 +292,7 @@ header .nav .container .main-list > li > a{
         padding: 0 15px;
         font-size: 14px;
     }
-}
+}    
 header .nav .container .main-list >li > a::before{
     content: "";
     position: absolute;
@@ -1782,3 +1782,87 @@ header .mega-menu .image img{
     font-style: italic;
 }
 /* end stats */
+/*****************************************************************************************************/
+/* start discount */
+.discount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    min-height: 100vh;
+}
+@media(max-width:767px){
+    .discount{
+        flex-direction: column;
+    }
+}
+.discount  .image{
+    align-self: stretch;
+    background-image: url(../imgs/discount-background1.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    flex-basis: 50%;
+    color: white;
+}
+.discount .image .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.discount .image .content::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 255,0.9);
+    z-index: -1;
+}
+.discount .image p{
+    line-height: 1.6;
+    letter-spacing: 1.2px;
+}
+.discount .image img{
+    max-width: 100%;
+    width: 400px;
+}
+.discount .content{
+    text-align: center;
+    padding: 0 20px;
+}
+.discount .form{
+    align-self: stretch;
+}
+.discount .form .content{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.discount .form h1{
+    text-transform: uppercase;
+}
+.discount .form .content .input{
+    border: none;
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc;
+    min-width: 280px;
+}
+.discount .form textarea{
+    min-height: 200px;
+}
+.discount .form button{
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    min-width: 280px;
+    margin-bottom: 30px;
+}
+/* end discount */
