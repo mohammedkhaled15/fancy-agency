@@ -238,14 +238,19 @@ let videoName = document.querySelectorAll(".videos .content .menu ul li")
 // Storing title of the playing video in variable
 let playingVideoName = document.querySelector(".videos .content .preview .comment p")
 
-let source = document.querySelector(".videos .content .preview .image video")
+let source = document.querySelector(".videos .content .preview .video-player video")
 
 // Adding event for each li when clicked
 videoName.forEach((a)=>{
     a.addEventListener("click", function () {
         // console.log(a)
-        source.setAttribute("src",`videos/${a.children[0].textContent}.FLV`)
+        source.setAttribute("src",`videos/${a.children[0].textContent}.mp4`)
         // Changing the title of the playing video to the one which clicked
         playingVideoName.textContent = a.children[0].textContent
     })
 })
+
+// generating the true length of the video
+
+let gf = getComputedStyle(document.body)
+console.log(gf.getPropertyValue("--light-blue"))

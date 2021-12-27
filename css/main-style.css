@@ -1,7 +1,7 @@
 /* start global */
 :root {
-    --light-blue: #2196f3; 
-    --lighter-blue:#75b7ec;
+    --main-color: #2196f3; 
+    --sec-color:#75b7ec;
     --section-color:#ececec;
     --card-red:#ff0011;
     --card-green:#009d8a;
@@ -198,7 +198,7 @@ margin-right: auto;
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: var(--light-blue);
+    background-color: var(--main-color);
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -256,7 +256,7 @@ header .nav .main-menu{
 header .nav .container .logo{
     font-size: 26px;
     font-weight: bold;
-    color:var(--light-blue) ;
+    color:var(--main-color) ;
     height: 70px;
     display: flex;
     justify-content: center;
@@ -297,7 +297,7 @@ header .nav .container .main-list >li > a::before{
     content: "";
     position: absolute;
     width: 0%;
-    background-color: var(--light-blue);
+    background-color: var(--main-color);
     height: 3px;
     top: 0;
     left: 0;
@@ -312,7 +312,7 @@ header .nav .container .main-list > li > a:hover:before{
 }
 header .nav  .container .main-list > li > a:hover{
     background-color: #fafafa;
-    color: var(--light-blue);
+    color: var(--main-color);
 }
 header .nav .container .main-list li:last-child a{
     cursor: pointer;
@@ -327,7 +327,7 @@ header .mega-menu{
     align-items: center;
     gap: 40px;
     padding: 15px 20px;
-    border-bottom: solid 2px var(--light-blue) ;
+    border-bottom: solid 2px var(--main-color) ;
     transition: var(--transition-duration);
     -webkit-transition: var(--transition-duration);
     -moz-transition: var(--transition-duration);
@@ -382,7 +382,7 @@ header .mega-menu .links li:not(:last-child){
 header .mega-menu .links li a{
     font-size: 18px;
     font-weight: bold;
-    color: var(--light-blue);
+    color: var(--main-color);
 }
 @media(max-width:1200px){
     header .mega-menu .links li a{
@@ -501,7 +501,7 @@ header .mega-menu .image img{
     top: calc(100% - 60px);
     right: 50%;
     transform: translateX(50%);
-    color: var(--light-blue);
+    color: var(--main-color);
     animation: bounce 2s infinite linear;
     -webkit-animation: bounce 2s infinite linear;
     -webkit-transform: translateX(50%);
@@ -569,10 +569,10 @@ header .mega-menu .image img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--light-blue) !important;
+    color: var(--main-color) !important;
 }
 .articles .card .more-info h4{
-    color: var(--light-blue);
+    color: var(--main-color);
 }
 /* start articles */
 /****************************************************************************/
@@ -955,12 +955,12 @@ header .mega-menu .image img{
     color: #666;
 }
 .team-members .content .card .social a:hover{
-    color: var(--light-blue);
+    color: var(--main-color);
 }
 .team-members .content .card h2{
     text-align: left;
     z-index: 1;
-    color: var(--light-blue);
+    color: var(--main-color);
     padding: 15px;
     margin-left: 60px;
 }    
@@ -992,7 +992,7 @@ header .mega-menu .image img{
     padding: 30px;
     text-align: center;
     box-shadow: 5px 5px 10px #666;
-    color: var(--light-blue);
+    color: var(--main-color);
     counter-increment: count-of-cards;
     position: relative;
     z-index: 10;
@@ -1032,7 +1032,7 @@ header .mega-menu .image img{
     color: #fff;
     font-weight: bold;
     font-size: 26px;
-    background-color: var(--light-blue);
+    background-color: var(--main-color);
     padding: 10px 40px 10px 20px;
     z-index: 11;
 }
@@ -1057,12 +1057,12 @@ header .mega-menu .image img{
     height: 50px;
     background-color: #f9f9f9;
     z-index: -1;
-    color: var(--light-blue);
+    color: var(--main-color);
 }
 .services .content .card .effect{
     position: absolute;
     height: 3px;
-    background-color: var(--light-blue);
+    background-color: var(--main-color);
     top: -2px;
     left: 50%;
     transform: translateX(-50%);
@@ -1118,7 +1118,7 @@ header .mega-menu .image img{
     left: 0;
     bottom: 0;
     height: 100%;
-    background-color: var(--light-blue);
+    background-color: var(--main-color);
     transition: 1s;
     -webkit-transition: 1s;
     -moz-transition: 1s;
@@ -1165,7 +1165,7 @@ header .mega-menu .image img{
     border: 2px solid #ddd;
     border-radius: 5px;
     padding: 2px;
-    color: var(--light-blue);
+    color: var(--main-color);
 }
 /* end skills */
 /*************************************************************************************/
@@ -1360,13 +1360,13 @@ header .mega-menu .image img{
     bottom: 26%;
 }
 .latest-events .content .info .counter div:hover{
-    border-color: var(--light-blue);
+    border-color: var(--main-color);
 }
 .latest-events .content .info .counter div:hover::after{
-    background-color: var(--light-blue);
+    background-color: var(--main-color);
 }
 .latest-events .content .info .counter div span:first-child{
-    color: var(--light-blue);
+    color: var(--main-color);
     font-size: 32px;
     font-weight: bold;
     padding: 20px 10px;
@@ -1416,14 +1416,14 @@ header .mega-menu .image img{
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
     width: 100%;
-    caret-color: var(--light-blue);
+    caret-color: var(--main-color);
 }
 .latest-events .container .subsribtion input::placeholder{
     color: var(--section-color);
 }
 .latest-events .container .subsribtion button{
     cursor: pointer;
-    background-color: var(--light-blue);
+    background-color: var(--main-color);
     border:none;
     outline: none;
     padding: 17px 8px;
@@ -1513,7 +1513,7 @@ header .mega-menu .image img{
     right: -9%;
     position: absolute;
     color: #fff;
-    background-color: var(--light-blue);
+    background-color: var(--main-color);
     padding: 8px 26px;
     font-size: 1.2rem;
     font-weight: bold;
@@ -1544,7 +1544,7 @@ header .mega-menu .image img{
     padding-bottom: 30px;
 }
 .pricing .content h1{
-    color: var(--light-blue);
+    color: var(--main-color);
     font-size: 3.5rem;
     font-weight: bold;
     letter-spacing: 1.2px;
@@ -1579,12 +1579,12 @@ header .mega-menu .image img{
     font-family: "Font Awesome 6 Free";
     content: "\f00c";
     font-weight: bold;
-    color: var(--light-blue);
+    color: var(--main-color);
     margin: 0 15px;
     font-size: 1.2rem;
 }
 .pricing .content .card button{
-    border: solid 2px var(--light-blue);
+    border: solid 2px var(--main-color);
     background-color: transparent;
     padding: 15px;
     cursor: pointer;
@@ -1594,7 +1594,7 @@ header .mega-menu .image img{
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
-    color: var(--light-blue);
+    color: var(--main-color);
     font-weight: bold;
     transition: var(--transition-duration);
     -webkit-transition: var(--transition-duration);
@@ -1604,7 +1604,7 @@ header .mega-menu .image img{
     z-index: 5;
 }
 .pricing .content .card button:hover{
-    background-color: var(--light-blue);
+    background-color: var(--main-color);
     color: #fff;
 }
 /* end pricing */
@@ -1632,7 +1632,7 @@ header .mega-menu .image img{
     display: flex;
     flex-direction: column;
     align-self: stretch;
-    
+    flex: 1;
 }
 .videos .content .menu .title{
     display: flex;
@@ -1678,7 +1678,7 @@ header .mega-menu .image img{
     -o-transition: var(--transition-duration);
 }
 .videos .content .menu ul li:hover span:first-child{
-    color: var(--light-blue);
+    color: var(--main-color);
 }
 .videos .content .menu ul li span:nth-child(2){
     color: #666;
@@ -1697,7 +1697,9 @@ header .mega-menu .image img{
     text-align: left;
     padding: 15px 10px;
 }
-.videos .content .preview .image video{
+.videos .content .preview .video-player video{
     max-width: 100%;
+    max-height: 100vh;
 }
+
 /* end videos */
