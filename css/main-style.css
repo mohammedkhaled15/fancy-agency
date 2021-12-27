@@ -1701,5 +1701,84 @@ header .mega-menu .image img{
     max-width: 100%;
     max-height: 100vh;
 }
-
 /* end videos */
+/*****************************************************************************************************/
+/* start stats */
+.stats{
+    padding-top: var(--section-top-padding);
+    padding-bottom: var(--section-bottom-padding);
+    background-image: url(../imgs/stats.jpg);
+    background-size:cover ;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.stats:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255,0.9);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.stats h1{
+    text-transform: uppercase;margin-bottom: 100px;
+}
+.stats .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 30px;
+}
+.stats .content .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    background-color: #fff;
+    padding: 20px;
+    position: relative;
+}
+.stats .content .card:before,
+.stats .content .card:after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: var(--main-color);
+    height: 0;
+    transition: var(--transition-duration);
+    -webkit-transition: var(--transition-duration);
+    -moz-transition: var(--transition-duration);
+    -ms-transition: var(--transition-duration);
+    -o-transition: var(--transition-duration);
+}
+.stats .content .card:before{
+    top: 0;
+    right: 0;
+}
+.stats .content .card:after{
+    bottom: 0;
+    left: 0;
+}
+.stats .content .card:hover:before,
+.stats .content .card:hover:after{
+    height: 100%;
+}
+.stats .content .card i{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.stats .content .card span:first-of-type{
+    font-size: 3.2rem;
+    font-weight: bold;
+    letter-spacing: 5.5px;
+}
+.stats .content .card span:last-child{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--main-color);
+    font-style: italic;
+}
+/* end stats */

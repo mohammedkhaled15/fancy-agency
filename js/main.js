@@ -215,7 +215,7 @@ window.addEventListener("scroll",function(){
 
         if(!done){
 
-        // making the width of each skill equal to the value stored in the custom attr
+        // making the number of each price equal to the value stored in the custom attr
         prices.forEach((a)=>countPrice(a))
 
         }
@@ -248,4 +248,64 @@ videoName.forEach((a)=>{
         // Changing the title of the playing video to the one which clicked
         playingVideoName.textContent = a.children[0].textContent
     })
+})
+
+/**********************************************************************************************************/
+
+// Increasing numbers of stats when reaching it
+
+// Storing our spans numbers
+let stats = document.querySelectorAll(".stats .content .card span:first-of-type")
+
+// Storing our main section in variable
+let statsSection = document.getElementById("stats")
+
+// Storing boolean value to check if the fun worked or not
+let finishedStats = false
+
+// Making sure all numbers are zero when the page load
+window.onload = function(){
+    stats.forEach((stat)=>stat.textContent = "0")
+}
+// Making our main function
+let countStats = function(stat){
+
+    // Storing the value of our custom attr
+    let goal = stat.dataset.goal
+
+    //Making our interval function
+    let countStat = setInterval(function(){
+
+        // increament of the text content by 1 each certain period of time
+        stat.textContent++
+
+        // using if condition to check when th  increament value reches the required goal value
+        if(stat.textContent == goal){
+
+            // stop the setinterval func when reaching the required goal value
+            clearInterval(countStat)
+        }
+
+    // dividing required period of time by the goal to make all counter finish at the same time
+    }, 1000 / (goal))
+}
+
+// Making event of increament triggered when the page scrolled to our section
+window.addEventListener("scroll", function(){
+    
+    // when the value of scrollY reaches the section offsetTop which mean it is on your screen now
+   // 200 here means before the value of offsettop with 200px
+    if(window.scrollY > statsSection.offsetTop - 50){
+        
+        if(finishedStats == false){
+
+            // Applying our main func on all stats
+            stats.forEach((a)=>countStats(a))
+
+        }
+
+        // CHANGING THE VALUE OF "started" VARIABLE after making sure that our function finished excution one time  
+        finishedStats = true
+        
+    }
 })
