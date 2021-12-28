@@ -2,6 +2,7 @@
 :root {
     --main-color: #2196f3; 
     --sec-color:#75b7ec;
+    --day-color:#fff;
     --section-color:#ececec;
     --card-red:#ff0011;
     --card-green:#009d8a;
@@ -9,7 +10,6 @@
     --transition-duration:0.6s;
     --section-top-padding: 80px;
     --section-bottom-padding: 80px;
-    /* --section-margin:100px;  */
 }
 * {
 -webkit-box-sizing: border-box;
@@ -240,7 +240,7 @@ margin-right: auto;
 header{
     box-shadow: 0 0 10px #ddd;
     position: relative;
-    background-color: #fff;
+    background-color: var(--day-color);
     
 }
 header.nav{
@@ -319,7 +319,7 @@ header .nav .container .main-list li:last-child a{
 }
 header .mega-menu{
     width: 100%;
-    background-color: #fff;
+    background-color: var(--day-color);
     position: absolute;
     left: 0;
     top: calc(100% + 50px);
@@ -591,7 +591,7 @@ header .mega-menu .image img{
 }
 .gallery .content .image{
     padding: 15px;
-    background-color: white;
+    background-color: var(--day-color);
     overflow: hidden;
     position: relative;
     box-shadow: 10px 10px 20px #666;
@@ -673,7 +673,7 @@ header .mega-menu .image img{
     left: -18px;
     width: 0px;
     height: 0;
-    border-color: transparent transparent #fff transparent;
+    border-color: transparent transparent var(--day-color) transparent;
     border-style: solid;
     border-width: 0px 0px 111px 650px;
     transition: var(--transition-duration);
@@ -683,7 +683,7 @@ header .mega-menu .image img{
     -o-transition: var(--transition-duration);
 }
 .features .content .card:hover .image::after{
-    border-color: transparent transparent #fff transparent;
+    border-color: transparent transparent var(--day-color) transparent;
     border-style: solid;
     border-width: 0px 650px 111px 0px;
 }
@@ -771,7 +771,7 @@ header .mega-menu .image img{
     -o-transition: 0.3s;
 }
 .features .card:hover .button{
-    color: #fff;
+    color: var(--day-color);
 }
 .features .card:nth-child(1):hover .button::after{
     width: 100%;
@@ -803,7 +803,7 @@ header .mega-menu .image img{
 .testimonials .content .card{
     position: relative;
     box-shadow: 15px 15px 10px transparent;
-    background-color: white;
+    background-color: var(--day-color);
     padding: 20px 15px;
     border-radius: 10px;
     -webkit-border-radius:;
@@ -868,10 +868,9 @@ header .mega-menu .image img{
 }
 .team-members .content .card{
     position: relative;
-    /* width: calc(100% - 60px); */
     display: flex;
     flex-direction: column;
-    background-color:#fff;
+    background-color:var(--day-color);
     padding: 30px;
     border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -988,7 +987,7 @@ header .mega-menu .image img{
     
 }
 .services .content .card{
-    background-color: #fff;
+    background-color: var(--day-color);
     padding: 30px;
     text-align: center;
     box-shadow: 5px 5px 10px #666;
@@ -1206,7 +1205,7 @@ header .mega-menu .image img{
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    background-color: rgb(246, 245, 245);
+    background-color: var(--day-color);
     border: 2px solid #fff;
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -1470,7 +1469,7 @@ header .mega-menu .image img{
     gap: 30px;
 }
 .pricing .content .card{
-    background-color: #fff;
+    background-color: var(--day-color);
     box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
     padding: 20px 0 30px;
     position: relative;
@@ -1535,7 +1534,7 @@ header .mega-menu .image img{
     border-width: 18px;
     top: 50%;
     right: -1%;
-    border-color: transparent #fff transparent transparent;
+    border-color: transparent var(--day-color) transparent transparent;
     border-style: solid;
     transform: translatey(-50%);
 }
@@ -1693,7 +1692,7 @@ header .mega-menu .image img{
     justify-content: space-between;
 }
 .videos .content .preview .comment{
-    background-color: #fff;
+    background-color: var(--day-color);
     text-align: left;
     padding: 15px 10px;
 }
@@ -1737,7 +1736,7 @@ header .mega-menu .image img{
     justify-content: center;
     align-items: center;
     gap:30px;
-    background-color: #fff;
+    background-color: var(--day-color);
     padding: 20px;
     position: relative;
 }
@@ -1802,7 +1801,7 @@ header .mega-menu .image img{
     position: relative;
     z-index: 1;
     flex-basis: 50%;
-    color: white;
+    color: var(--day-color);
 }
 .discount .image .content{
     display: flex;
@@ -1858,7 +1857,7 @@ header .mega-menu .image img{
 }
 .discount .form button{
     background-color: var(--main-color);
-    color: white;
+    color: var(--day-color);
     padding: 10px 15px;
     border: none;
     min-width: 280px;
@@ -1896,7 +1895,7 @@ header .mega-menu .image img{
     text-align: left;
 }
 .footer .social h1{
-    color: white;
+    color: var(--day-color);
     letter-spacing: 1.8px;
     margin-top: 0;
 }
@@ -1923,15 +1922,15 @@ header .mega-menu .image img{
 }
 .footer .social ul li:nth-child(1):hover a{
     background-color: #344ef5;
-    color: white;
+    color: var(--day-color);
 }
 .footer .social ul li:nth-child(2):hover a{
     background-color: #0093f5;
-    color: white;
+    color: var(--day-color);
 }
 .footer .social ul li:nth-child(3):hover a{
     background-color: red;
-    color: white;
+    color: var(--day-color);
 }
 .footer .social p{
     line-height: 1.8;
