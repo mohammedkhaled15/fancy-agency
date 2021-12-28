@@ -312,24 +312,35 @@ window.addEventListener("scroll", function(){
 
 /*************************************************************************************************************/
 
+// Making Typing Effect
+
+// Storing our text from custom attr in a variable
 let mypr = document.querySelector(".landing-section .intro p").dataset.text
 
+// Storing our text holder element in our page
 let place = document.querySelector(".landing-section .intro p")
-console.log(mypr)
 
-let prr = function(a){
+
+// making the function excute each load for the window
+window.addEventListener("load", function(){
     
+    // Declaring variable used as a counter
     let i = 0
+
+    // Making our core function which depend on the idea of adding new letter for the text content
     let typing = setInterval(function(){
             
-            place.textContent += mypr[i]
-            i +=1
-            if(i > mypr.length-1){
-                clearInterval(typing)
-            }
-        
-    },300)
-}
+        // Starting adding our text content letter by letter
+        place.textContent += mypr[i]
 
+        // Increasing counter by one to get the next letter 
+        i +=1
 
-prr(mypr);
+        // Making condition to stop the function when the text letters finished
+        if(i > mypr.length-1){
+
+            clearInterval(typing)
+
+        }
+    },90)
+})
