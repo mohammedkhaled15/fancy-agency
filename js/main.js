@@ -120,10 +120,10 @@ window.addEventListener("scroll",function(){
 
 /***************************************************************************************************************/
 
-// Making Counter for My birthday 1 / 5 
+// Making Counter for  1 / 5 
 
-// get number of milliseconds till my birthday
-let myBirthDay = new Date("May 01, 2022 18:00:00").getTime()
+// get number of milliseconds till certain date
+let myBirthDay = new Date("May 01, 2026 18:00:00").getTime()
 
 // Use setinterval function as anonymos function which repeat doing something each period of time 
 setInterval(function(){
